@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700')
+
+body
+  font-family: 'Roboto', sans-serif
+
+ul
+  padding: 0
+  margin: 0
+  list-style-type: none
+
+img
+  display: inline-block
+  max-width: 100%
+  height: auto
+
+a
+  display: block
+  text-decoration: none
+
+.row
+  max-width: 1200px
+  padding: 64px 0 16px
+  margin: 0 auto
+
+.title
+  width: 25%
+  display: inline-block
+  vertical-align: top
+
+.latest
+  width: 25%
+  display: inline-block
+  vertical-align: top
+
+  a
+    padding: 16px
+    color: #1E1E1E
+
+.fa-2x
+  color: rgba(255, 255, 255, 0.9)
+
+.social-media
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+
+.fa-twitter:hover
+  color: #1DA1F2
+
+.fa-github:hover
+  color: #000000
+
+.fa-linkedin-square:hover
+  color: #0F7CB7
+
+.fa-film:hover
+  color: #FCC80E
+
+.main-container
+  position: relative
+
+.content
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  list-style-type: none
+
+  li
+    flex: 0 0 360px
+    padding: 16px
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {}
+
+
+/* Medium and up */
+@media screen and (min-width: 40em)
+  .left-drawer
+    width: 420px !important
+
+    &.closed
+      transform: translate(-430px, 0px) !important
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+
