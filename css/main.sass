@@ -19,13 +19,17 @@ a
 
 .row
   max-width: 1200px
-  padding: 64px 0 16px
+  padding: 0 16px
   margin: 0 auto
 
 .title
   width: 25%
   display: inline-block
   vertical-align: top
+
+// SUBHEADER
+.subheader-container
+  padding-top: 64px
 
 .latest
   width: 25%
@@ -66,8 +70,8 @@ a
   list-style-type: none
 
   li
-    flex: 0 0 360px
-    padding: 16px
+    flex: 0 0 320px
+    padding: 0
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {}
@@ -80,6 +84,10 @@ a
 
     &.closed
       transform: translate(-430px, 0px) !important
+
+  .content li
+    flex: 0 0 360
+    padding: 16px
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {}

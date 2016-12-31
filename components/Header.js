@@ -65,6 +65,7 @@ export default class Header extends Component {
                     <Avatar
                       src={profile}
                       size={100}
+                      alt="Profile image"
                     />
                     <CardText
                       style={{
@@ -89,7 +90,7 @@ export default class Header extends Component {
                         className="fa fa-twitter fa-2x"/></a>
                       <a href="https://github.com/irekrog" target="_blank" title="Github"><i
                         className="fa fa-github fa-2x"/></a>
-                      <a href="https://www.linkedin.com/in/irekrog" target="_blank" title="Linkedin"><i
+                      <a href="https://www.linkedin.com/in/irekrog" target="_blank" title="LinkedIn"><i
                         className="fa fa-linkedin-square fa-2x"/></a>
                       <a href="http://www.filmweb.pl/user/warzachew" target="_blank" title="Filmweb"><i
                         className="fa fa-film fa-2x"/></a>
@@ -106,7 +107,7 @@ export default class Header extends Component {
                   textAlign: 'center'
                 }}
               >
-                <img src={russia}/>
+                <img src={russia} alt="Background drawer image"/>
               </CardMedia>
             </Card>
             <MenuItem

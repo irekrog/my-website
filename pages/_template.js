@@ -40,9 +40,10 @@ export default class Template extends Component {
         <div>
           {/*<LatestProject repositories={this.state.repos}/>*/}
         </div>
-        <div className="row">
+        <div className="subheader-container">
           <SubHeader/>
-
+        </div>
+        <div className="row">
           <section className="main-section">
             {this.props.children}
           </section>

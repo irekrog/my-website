@@ -28,7 +28,7 @@ export default class PostCard extends Component {
         <div>
           <Card>
             <CardMedia>
-              <img src={prefixLink(russia)}/>
+              <img src={prefixLink(russia)} alt="Post image"/>
             </CardMedia>
             <CardHeader title={this.props.pageData.data.title}/>
             <CardText>
