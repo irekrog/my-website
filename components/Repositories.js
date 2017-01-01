@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-import { Divider, List, ListItem } from 'material-ui';
+import {Divider, List, ListItem} from 'material-ui';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -16,43 +16,38 @@ const style = {
   backgroundColor: 'rgba(255, 255, 255, 0.7)'
 };
 
-export default class LatestProject extends Component {
+export default class Repositories extends Component {
 
-  render () {
+  render() {
     const projects = this.props.repositories
       .filter(item => !item.fork)
       .map(item => {
-        console.log(item);
         return (
-        <ListItem
-          key={item.id}
-          innerDivStyle={{
-            padding: 0
-          }}
-        >
-          <a
-            href={item.html_url}
-            target="_blank"
+          <ListItem
+            key={item.id}
+            innerDivStyle={{
+              padding: 0
+            }}
           >
-            {item.name}
-          </a>
-        </ListItem>
+            <a
+              href={item.html_url}
+              target="_blank"
+            >
+              {item.name}
+            </a>
+          </ListItem>
         );
       });
 
-    console.log(this.props.repositories);
     return (
       <MuiThemeProvider>
-
-        <div className="latest">
+        <div className="repositories">
           <Paper style={style} zDepth={4}>
-            <p>My Github</p>
+            <h1>Projects</h1>
             <Divider/>
-
             <List>
-            {projects}
+              {projects}
             </List>
-
           </Paper>
         </div>
       </MuiThemeProvider>
