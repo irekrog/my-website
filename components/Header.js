@@ -4,7 +4,10 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import russia from '../images/russia.jpg';
 import profile from '../images/profile.jpg';
-import { Link } from 'react-router';
+import {Link} from 'react-router';
+import IconButton from 'material-ui/IconButton';
+import Message from 'material-ui/svg-icons/communication/mail-outline';
+import Mail from './Mail';
 
 import '../css/main.sass';
 import 'font-awesome/css/font-awesome.css';
@@ -18,11 +21,14 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
+      mailOpen: false
     };
 
     this.openDrawer = this.openDrawer.bind(this);
     this.closeDrawer = this.closeDrawer.bind(this);
+    this.openMail = this.openMail.bind(this);
+    this.closeMail = this.closeMail.bind(this);
   }
 
   openDrawer() {
@@ -34,6 +40,18 @@ export default class Header extends Component {
   closeDrawer() {
     this.setState({
       open: false
+    });
+  }
+
+  openMail() {
+    this.setState({
+      mailOpen: !this.state.mailOpen
+    });
+  }
+
+  closeMail() {
+    this.setState({
+      mailOpen: false
     });
   }
 
@@ -51,6 +69,12 @@ export default class Header extends Component {
             style={{
               position: 'fixed'
             }}
+            iconElementRight={<IconButton><Message /></IconButton>}
+            onRightIconButtonTouchTap={this.openMail}
+          />
+          <Mail
+            openDialog={this.state.mailOpen}
+            closeDialog={this.closeMail}
           />
           <Drawer
             containerClassName={drawerClass}
@@ -112,21 +136,20 @@ export default class Header extends Component {
             </Card>
             <MenuItem
               onTouchTap={this.closeDrawer}
-              containerElement={<Link style={{boxShadow: 'none'}} to={'/'} />}
+              containerElement={<Link style={{boxShadow: 'none'}} to={'/'}/>}
             >
               Home
             </MenuItem>
             <MenuItem
               onTouchTap={this.closeDrawer}
-              containerElement={<Link style={{boxShadow: 'none'}} to={'/about/'} />}
+              containerElement={<Link style={{boxShadow: 'none'}} to={'/projects/'}/>}
             >
-              About
+              Projects
             </MenuItem>
             <MenuItem
               onTouchTap={this.closeDrawer}
-              containerElement={<Link style={{boxShadow: 'none'}} to={'/contact/'} />}
             >
-              Contact
+              About
             </MenuItem>
           </Drawer>
 
