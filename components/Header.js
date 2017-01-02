@@ -85,11 +85,12 @@ export default class Header extends Component {
             <Card>
               <CardMedia
                 overlay={
-                  <div>
+                  <div className="background-info">
                     <Avatar
                       src={profile}
-                      size={100}
+                      size={40}
                       alt="Profile image"
+                      className="profile-image"
                     />
                     <CardText
                       style={{

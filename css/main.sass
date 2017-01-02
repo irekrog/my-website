@@ -25,6 +25,13 @@ a
   padding: 0 16px
   margin: 0 auto
 
+.background-info
+  > div:first-of-type
+    font-size: 16px !important
+
+  > div:nth-of-type(2)
+    font-size: 14px !important
+
 // SUBHEADER
 .subheader-container
   padding-top: 64px
@@ -75,11 +82,7 @@ a
     flex: 0 0 320px
     padding: 0
 
-/* Small only */
-@media screen and (max-width: 39.9375em) {}
-
-
-/* Medium and up */
+// Medium and up
 @media screen and (min-width: 40em)
   .left-drawer
     width: 420px !important
@@ -87,16 +90,17 @@ a
     &.closed
       transform: translate(-430px, 0px) !important
 
+  .background-info
+    > div:first-of-type
+      font-size: 24px !important
+
+    > div:nth-of-type(2)
+      font-size: 16px !important
+
+  .profile-image
+    width: 100px !important
+    height: 100px !important
+
   .content li
     flex: 0 0 360
     padding: 16px
-
-/* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
-
-/* Large and up */
-@media screen and (min-width: 64em) {}
-
-/* Large only */
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
-
