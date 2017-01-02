@@ -10,9 +10,8 @@ export default class BlogIndex extends React.Component {
         <Helmet
           title={config.blogTitle}
           meta={[
-            {'name': 'description', 'content': 'Blog2'},
-            {'name': 'keywords', 'content': 'blog, articles'},
-            {'property2': 'test'}
+            {'name': 'description', 'content': 'Irek Róg\'s (@irekrog) website about new front end technologies.'},
+            {'name': 'keywords', 'content': 'Front-End, front, end, HTML5, CSS, JavaScript, irekrog'}
           ]}
         />
         <PostContainer posts={this.props.route.pages}/>

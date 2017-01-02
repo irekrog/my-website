@@ -9,10 +9,12 @@ import Paper from 'material-ui/Paper';
 const style = {
   height: 'auto',
   width: '100%',
-  margin: 20,
+  marginTop: 20,
+  marginRight: 0,
+  marginBottom: 20,
+  marginLeft: 0,
   textAlign: 'center',
   display: 'inline-block',
-  marginLeft: 0,
   backgroundColor: 'rgba(255, 255, 255, 0.7)'
 };
 
@@ -43,7 +45,7 @@ export default class Repositories extends Component {
       <MuiThemeProvider>
         <div className="repositories">
           <Paper style={style} zDepth={4}>
-            <h1>Projects</h1>
+            <h2>Projects</h2>
             <Divider/>
             <List>
               {projects}

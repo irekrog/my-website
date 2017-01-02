@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import CircularProgress from 'material-ui/CircularProgress';
 import Repositories from '../../components/Repositories';
+import Helmet from 'react-helmet';
+import {config} from 'config';
 
 import axios from 'axios';
 
@@ -49,7 +51,16 @@ export default class Projects extends Component {
       );
     } else {
       return (
-        <Repositories repositories={this.state.repos}/>
+        <div>
+          <Helmet
+            title={`Projects | ${config.blogTitle}`}
+            meta={[
+              {'name': 'description', 'content': 'Irek Róg (@irekrog) projects (repositories) from GitHub'},
+              {'name': 'keywords', 'content': 'Front-End, front, end, HTML5, CSS, JavaScript, irekrog'}
+            ]}
+          />
+          <Repositories repositories={this.state.repos}/>
+        </div>
       );
     }
   }
