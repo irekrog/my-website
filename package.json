@@ -5,16 +5,23 @@
   "author": "Irek Rog <irekrog.pl@gmail.com>",
   "dependencies": {
     "axios": "^0.15.3",
+    "cheerio": "^0.22.0",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "gatsby": "^0.12.27",
+    "image-size": "^0.5.0",
     "lodash": "^4.17.3",
     "material-ui": "^0.16.6",
+    "mkdirp": "^0.5.1",
     "moment": "^2.17.1",
+    "node-sass": "^3.11.1",
     "react-helmet": "^3.2.2",
     "react-tap-event-plugin": "^2.0.1",
     "react-typography": "^0.15.0",
+    "recursive-readdir": "^2.1.0",
+    "rimraf": "^2.5.4",
     "safe-access": "^0.1.0",
+    "sync-request": "^3.0.1",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
@@ -40,7 +47,7 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build && node ampify.js",
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
   }
 }
